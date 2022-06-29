@@ -1,118 +1,131 @@
-body{
-  font-family: 'Roboto', SansSerif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  color: #000402;
-  margin: auto;
+body {
+    font-family: 'Roboto', SansSerif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000402;
+    margin: auto;
 }
-#container{
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-}
-h1{
-  color: #012B34;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  margin-top: 100px;
-}
-.spoiler-block{
 
+#container {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.spoiler-block__item:first-child{
-  border-top: 1px solid #E6E6E6;
-  padding-top: 30px;
+
+h1 {
+    color: #012B34;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    margin-top: 100px;
 }
-.spoiler-block__item{
-  border-bottom: 1px solid #E6E6E6;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-}
-.spoiler-block__item .name{
-  color: #012B34;
-  font-size: 36px;
-  position: relative;
-  cursor: pointer;
-  position: relative;
-}
-.spoiler-block__item .name:before{
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  background: url(./src/group_28427579_2.svg) 0 0 no-repeat;
-  transform: rotate(0);
-  animation-duration: 0.5s;
-  animation-name: toggleHide;
-  background-size: contain;
-}
-.spoiler-block__item.active .name{
-  color: #02818A;
-}
-.spoiler-block__item.active .name:before{
-  transform: rotate(-45deg);
-  animation-duration: 0.5s;
-  animation-name: toggleShow;
+
+.spoiler-block {
 
 }
 
-.spoiler-block__item.active .text{
-  height: auto;
-  transition: 0.5s;
-  animation-duration: 0.5s;
-  animation-name: showText;
+.spoiler-block__item:first-child {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 30px;
 }
-.spoiler-block__item .text{
-  height: 0;
-  transition: 0.5s;
-  opacity: 0.8;
-  overflow: hidden;
-  font-size: 20px;
-  width: 75%;
+
+.spoiler-block__item {
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.spoiler-block__item .name {
+    color: #012B34;
+    font-size: 36px;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+}
+
+.spoiler-block__item .name:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    background: url(./src/group_28427579_2.svg) 0 0 no-repeat;
+    transform: rotate(0);
+    animation-duration: 0.5s;
+    animation-name: toggleHide;
+    background-size: contain;
+}
+
+.spoiler-block__item.active .name {
+    color: #02818A;
+}
+
+.spoiler-block__item.active .name:before {
+    transform: rotate(-45deg);
+    animation-duration: 0.5s;
+    animation-name: toggleShow;
+
+}
+
+.spoiler-block__item.active .text {
+    height: auto;
+    transition: 0.5s;
+    animation-duration: 0.5s;
+    animation-name: showText;
+}
+
+.spoiler-block__item .text {
+    height: 0;
+    transition: 0.5s;
+    opacity: 0.8;
+    overflow: hidden;
+    font-size: 20px;
+    width: 75%;
 }
 
 @keyframes toggleShow {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
 }
+
 @keyframes toggleHide {
-  from {
-    transform: rotate(-45deg);
-  }
-  to {
-    transform: rotate(0);
-  }
+    from {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(0);
+    }
 }
+
 @keyframes showText {
-  0% {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  100% {
-    transform:translateX(0);
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
 @keyframes hideText {
-  0% {
-    transform:translateX(0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-80px);
-    display: none;
-  }
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-80px);
+        display: none;
+    }
 }
