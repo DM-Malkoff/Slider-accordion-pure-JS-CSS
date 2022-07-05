@@ -6,6 +6,3 @@ for (let i = 0; i < spoiler.length; i++) {
         textBlock[i].style.height = spoiler[i].classList.contains('active') ? textBlock[i].scrollHeight + "px" : 0
     })
 }
-for (let i = 0; i < spoiler.length; i++) {
-    textBlock[i].style.height = spoiler[i].classList.contains('active') ? textBlock[i].scrollHeight + "px" : 0
-}
